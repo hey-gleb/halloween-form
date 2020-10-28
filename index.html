@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="button">Click me</button>
+<video id="video" src="./videoplayback.mp4" style="display: none"></video>
+<script type="text/javascript">
+    document.getElementById('button').onclick = () => {
+        document.getElementById('video').style.display = 'block';
+        document.getElementById('video').play();
+    }
+</script>
+</body>
+</html>
