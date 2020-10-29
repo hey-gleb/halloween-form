@@ -2,13 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Чего вы ждете от хэллоуина</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<button id="button">Click me</button>
-<video id="video" src="./videoplayback.mp4" style="display: none"></video>
+<header id="header" class="header">
+    <img class="header__main-image" src="omskit.jpg" alt="main image">
+</header>
+<main id="main" class="main">
+    <div class="form">
+        <p class="form__title">Тестовая форма</p>
+        <p class="form__description">Какое-то описание</p>
+        <div class="form__fields-wrapper">
+            <div class="form__input-wrapper">
+                <label class="form__label label-required" for="field 1">
+                    Имя
+                </label>
+                <div class="form__input-block">
+                    <input class="form__input" id="field 1">
+                </div>
+            </div>
+            <div class="form__input-wrapper">
+                <label class="form__label label-required" for="field 2">
+                    Фамилия
+                </label>
+                <div class="form__input-block">
+                    <input class="form__input" id="field 2">
+                </div>
+            </div>
+            <div class="form__input-wrapper">
+                <label class="form__label" for="field 3">
+                    Отчество
+                </label>
+                <div class="form__input-block">
+                    <input class="form__input" id="field 3">
+                </div>
+            </div>
+        </div>
+        <button class="button-submit" id="button">Submit</button>
+    </div>
+</main>
+<video class="video" id="video" src="./videoplayback.mp4" style="display: none"></video>
 <script type="text/javascript">
     document.getElementById('button').onclick = () => {
+        document.getElementById('main').style.display = 'none';
+        document.getElementById('header').style.display = 'none';
         document.getElementById('video').style.display = 'block';
         document.getElementById('video').play();
     }
