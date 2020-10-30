@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Чего вы ожидаете от Хеллоуина?</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/png" />
+  </head>
+  <body id="body">
+    <header id="header" class="header">
+      <img class="header__main-image" src="./assets/main.jpg" alt="main image" />
+    </header>
+    <main id="main" class="main">
+      <div class="form">
+        <p class="form__title">Чего вы ожидаете от Хеллоуина?</p>
+        <p class="form__description">
+          Спасибо! Для вас есть послание, но оно
+          зашифровано в анаграмме. Решите-ка ее...
+          Разделяйте слова пробелами.
+          <img
+            class="form__anagram"
+            src="./assets/anagram.png"
+            alt="ЬЕТПРЕ ЫТ ЖЕЬМШО ЯЬАТАСЩОБР К ЕАН АН ЫТ"
+          />
+        </p>
+        <div class="form__fields-wrapper">
+          <div class="form__input-wrapper">
+            <label class="form__label label-required" for="field 1">
+              Расшифровка
+            </label>
+            <div class="form__input-block">
+              <input
+                class="form__input"
+                id="field 1"
+                type="text"
+                pattern="ТЕПЕРЬ ТЫ МОЖЕШЬ ОБРАЩАТЬСЯ К АНЕ НА ТЫ"
+                placeholder="Капсом, пожалуйста"
+                oninput="onInputFieldChange(1)"
+              />
+            </div>
+          </div>
+        </div>
+        <button class="button-submit" id="button" disabled>Спасибо!</button>
+      </div>
+    </main>
+    <video
+      class="video"
+      id="video"
+      src="./assets/video.mp4"
+      style="display: none"
+    ></video>
+    <script type="text/javascript">
+      document.getElementById('button').onclick = () => {
+        alert('Пожалуйста! 🎃')
+        document.getElementById('body').style.backgroundColor = '#000';
+        document.getElementById('main').style.display = 'none';
+        document.getElementById('header').style.display = 'none';
+        document.getElementById('video').style.display = 'block';
+        document.getElementById('video').play();
+      };
+    </script>
+  </body>
+</html>

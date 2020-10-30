@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>2020 Что вы ожидаете от Хеллоуина</title>
-    <link rel="stylesheet" href="main.css">
-    <script type="text/javascript" src="index.js"></script>
-    <link rel="shortcut icon" href="icon.png" type="image/png">
-</head>
-<body id="body">
-<header id="header" class="header">
-    <img class="header__main-image" src="main.jpg" alt="main image">
-</header>
-<main id="main" class="main">
-    <div class="form">
-        <p class="form__title">Что вы ожидаете от Хеллоуина?</p>
-        <p class="form__description">Мы решили собрать немного информации о том, чтобы вы хотели увидеть на Хеллоуине. Так мы поймем, насколько хорошо вас знаем.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Чего вы ожидаете от Хеллоуина?</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="text/javascript" src="./js/index.js"></script>
+    <link rel="shortcut icon" href="./assets/icon.png" type="image/png" />
+  </head>
+  <body id="body">
+    <header id="header" class="header">
+      <img class="header__main-image" src="./assets/main.jpg" alt="main image" />
+    </header>
+    <main id="main" class="main">
+      <div class="form">
+        <p class="form__title">Чего вы ожидаете от Хеллоуина?</p>
+        <p class="form__description">
+          Мы решили собрать немного информации о том, что бы вы хотели увидеть
+          на Хеллоуине. Так мы поймем, насколько хорошо мы вас знаем.
+        </p>
         <div class="form__fields-wrapper">
-            <div class="form__input-wrapper">
-                <label class="form__label label-required" for="field 1">
-                    E-mail
-                </label>
-                <div class="form__input-block">
-                    <input class="form__input" id="field 1" type="email" placeholder="Укажите рабочий" onchange="onInputFocusOut()">
-                </div>
+          <div class="form__input-wrapper">
+            <label class="form__label label-required" for="field 1">
+              E-mail
+            </label>
+            <div class="form__input-block">
+              <input
+                class="form__input"
+                id="field 1"
+                type="email"
+                placeholder="Рабочий, пожалуйста"
+                oninput="onInputFieldChange(4)"
+              />
             </div>
-            <div class="form__input-wrapper">
-                <label class="form__label label-required" for="field 2">
-                    Имя
-                </label>
-                <div class="form__input-block">
-                    <input class="form__input" id="field 2" placeholder="На русском языке" onchange="onInputFocusOut()">
-                </div>
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label label-required" for="field 2">
+              Имя
+            </label>
+            <div class="form__input-block">
+              <input
+                class="form__input"
+                id="field 2"
+                pattern="[А-Яа-яЁё]+"
+                placeholder="На русском, пожалуйста"
+                oninput="onInputFieldChange(4)"
+              />
             </div>
-            <div class="form__input-wrapper">
-                <label class="form__label label-required" for="field 3">
-                    Фамилия
-                </label>
-                <div class="form__input-block">
-                    <input class="form__input" id="field 3" placeholder="На русском языке" onchange="onInputFocusOut()">
-                </div>
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label label-required" for="field 3">
+              Фамилия
+            </label>
+            <div class="form__input-block">
+              <input
+                class="form__input"
+                id="field 3"
+                pattern="[А-Яа-яЁё]+"
+                placeholder="Тоже на русском, пожалуйста"
+                oninput="onInputFieldChange(4)"
+              />
             </div>
-            <div class="form__input-wrapper">
-                <label class="form__label label-required" for="field 4">
-                    Расскажите, чего вы ожидаете?
-                </label>
-                <div class="form__input-block">
-                    <input class="form__input" id="field 4" onchange="onInputFocusOut()">
-                </div>
+          </div>
+          <div class="form__input-wrapper">
+            <label class="form__label label-required" for="field 4">
+              Расскажите, чего вы ожидаете?
+            </label>
+            <div class="form__input-block">
+              <input
+                class="form__input"
+                id="field 4"
+                placeholder="На любом, пожалуйста"
+                oninput="onInputFieldChange(4)"
+              />
             </div>
+          </div>
         </div>
-        <button class="button-submit" id="button" disabled>Submit</button>
-    </div>
-</main>
-<video class="video" id="video" src="./video.mp4" style="display: none"></video>
-<script type="text/javascript">
-    document.getElementById('button').onclick = () => {
-        document.getElementById('body').style.backgroundColor = '#000'
-        document.getElementById('main').style.display = 'none';
-        document.getElementById('header').style.display = 'none';
-        document.getElementById('video').style.display = 'block';
-        document.getElementById('video').play();
-    }
-</script>
-</body>
+        <a href="./main-form.html">
+          <button class="button-submit" id="button" disabled>
+            Го дальше
+          </button>
+        </a>
+      </div>
+    </main>
+  </body>
 </html>
