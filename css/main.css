@@ -52,6 +52,10 @@ body {
   margin-top: 10px;
 }
 
+.form__cheems {
+  width: 40px;
+}
+
 .form__input-wrapper {
   margin-bottom: 45px;
 }

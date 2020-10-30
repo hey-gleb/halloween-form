@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Чего вы ожидаете от Хеллоуина?</title>
+    <title>Празднуем!</title>
     <link rel="stylesheet" href="./css/main.css" />
     <script type="text/javascript" src="./js/index.js"></script>
     <link rel="shortcut icon" href="./assets/icon.png" type="image/png" />
@@ -13,64 +13,40 @@
     </header>
     <main id="main" class="main">
       <div class="form">
-        <p class="form__title">Чего вы ожидаете от Хеллоуина?</p>
+        <p class="form__title">Праздничное испытаньице...</p>
         <p class="form__description">
-          Мы решили собрать немного информации о том, что бы вы хотели увидеть
-          на Хеллоуине. Так мы поймем, насколько хорошо мы вас знаем.
+          Для начала, пожалуйста, представьтесь.
+          Зачем? Да просто так
+          <img
+            class="form__cheems"
+            src="./assets/cheems.jpg"
+            alt="cheems"
+          />
         </p>
         <div class="form__fields-wrapper">
           <div class="form__input-wrapper">
             <label class="form__label label-required" for="field 1">
-              E-mail
-            </label>
-            <div class="form__input-block">
-              <input
-                class="form__input"
-                id="field 1"
-                type="email"
-                placeholder="Рабочий, пожалуйста"
-                oninput="onInputFieldChange(4)"
-              />
-            </div>
-          </div>
-          <div class="form__input-wrapper">
-            <label class="form__label label-required" for="field 2">
               Имя
             </label>
             <div class="form__input-block">
               <input
                 class="form__input"
-                id="field 2"
-                pattern="[А-Яа-яЁё]+"
-                placeholder="На русском, пожалуйста"
-                oninput="onInputFieldChange(4)"
+                id="field 1"
+                placeholder="Граф"
+                oninput="onInputFieldChange(2)"
               />
             </div>
           </div>
           <div class="form__input-wrapper">
-            <label class="form__label label-required" for="field 3">
+            <label class="form__label label-required" for="field 2">
               Фамилия
             </label>
             <div class="form__input-block">
               <input
                 class="form__input"
-                id="field 3"
-                pattern="[А-Яа-яЁё]+"
-                placeholder="Тоже на русском, пожалуйста"
-                oninput="onInputFieldChange(4)"
-              />
-            </div>
-          </div>
-          <div class="form__input-wrapper">
-            <label class="form__label label-required" for="field 4">
-              Расскажите, чего вы ожидаете?
-            </label>
-            <div class="form__input-block">
-              <input
-                class="form__input"
-                id="field 4"
-                placeholder="На любом, пожалуйста"
-                oninput="onInputFieldChange(4)"
+                id="field 2"
+                placeholder="Дракула"
+                oninput="onInputFieldChange(2)"
               />
             </div>
           </div>
